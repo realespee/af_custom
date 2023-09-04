@@ -30,6 +30,12 @@ app_license = "MIT"
 
 # include js in doctype views
 # doctype_js = {"doctype" : "public/js/doctype.js"}
+doctype_js ={
+    "Stock Entry":"custom_scripts/stock_entry.js",
+    "Purchase Receipt":"custom_scripts/purchase_receipt.js",
+    "Item":"custom_scripts/item.js",
+    "Purchase Order":"custom_scripts/purchase_order.js"
+}
 # doctype_list_js = {"doctype" : "public/js/doctype_list.js"}
 # doctype_tree_js = {"doctype" : "public/js/doctype_tree.js"}
 # doctype_calendar_js = {"doctype" : "public/js/doctype_calendar.js"}
@@ -109,6 +115,17 @@ app_license = "MIT"
 #		"on_trash": "method"
 #	}
 # }
+doc_events = {
+	"Purchase Receipt": {
+		"on_submit": "afghan_customization.afghan_customization.doctype_triggers.purchase_receipt.purchase_receipt.on_submit",
+	},
+    "Asset":{
+        "on_submit": "afghan_customization.afghan_customization.doctype_triggers.asset.asset.on_submit"
+	},
+    "Purchase Order":{
+        "validate":"afghan_customization.afghan_customization.doctype_triggers.purchase_order.purchase_order.validate"
+    }
+}
 
 # Scheduled Tasks
 # ---------------
