@@ -13,7 +13,7 @@ frappe.ui.form.on('Asset Disposal', {
 							"asset_name": frm.doc.asset_name
 						},
 						callback: function(r) {
-							cur_frm.reload_doc();
+							// cur_frm.reload_doc();
 						}
 					})
 				})
