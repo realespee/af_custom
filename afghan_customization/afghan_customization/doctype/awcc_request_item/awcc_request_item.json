@@ -9,9 +9,14 @@
   "item",
   "is_asset_item",
   "qty",
+  "asset",
   "asset_tag",
   "received_date",
-  "received_by"
+  "received_by",
+  "column_break_mw530",
+  "make",
+  "model",
+  "capacity"
  ],
  "fields": [
   {
@@ -33,6 +38,7 @@
    "in_list_view": 1,
    "label": "Asset Tag",
    "options": "Asset Tag",
+   "read_only": 1,
    "read_only_depends_on": "eval:doc.is_asset_item == 0"
   },
   {
@@ -57,12 +63,42 @@
    "in_list_view": 1,
    "label": "Is Asset Item",
    "read_only": 1
+  },
+  {
+   "fieldname": "column_break_mw530",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "eval:doc.is_asset_item == 1",
+   "fieldname": "make",
+   "fieldtype": "Link",
+   "label": "Make",
+   "options": "Make"
+  },
+  {
+   "depends_on": "eval:doc.is_asset_item == 1",
+   "fieldname": "model",
+   "fieldtype": "Data",
+   "label": "Model"
+  },
+  {
+   "depends_on": "eval:doc.is_asset_item == 1",
+   "fieldname": "capacity",
+   "fieldtype": "Data",
+   "label": "Capacity"
+  },
+  {
+   "fieldname": "asset",
+   "fieldtype": "Link",
+   "label": "Asset",
+   "options": "Asset",
+   "read_only": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2023-09-01 15:14:28.947626",
+ "modified": "2023-09-23 12:04:41.626593",
  "modified_by": "Administrator",
  "module": "Afghan Customization",
  "name": "AWCC Request Item",

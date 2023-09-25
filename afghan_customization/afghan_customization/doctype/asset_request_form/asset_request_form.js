@@ -14,6 +14,15 @@ frappe.ui.form.on('Asset Request Form', {
             };
             
         });
+		frm.set_query("make", "item_request", function(doc, cdt, cdn) {
+            var d =locals[cdt][cdn]
+            
+            return {
+                query: "afghan_customization.afghan_customization.doctype.asset_request_form.asset_request_form.item_make_filter",
+                filters:{"item": d.item} 
+            };
+            
+        });
 
 	},
 	onload:function(frm){

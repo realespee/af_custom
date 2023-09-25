@@ -19,6 +19,7 @@
   "hod",
   "column_break_ktgtc",
   "assign",
+  "asset_movement_configuration",
   "section_break_o9ciy",
   "approved_by",
   "column_break_ludkq",
@@ -36,6 +37,8 @@
   {
    "fieldname": "requested_by",
    "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Requested By",
    "options": "User"
   },
@@ -45,12 +48,17 @@
   },
   {
    "fieldname": "purpose",
-   "fieldtype": "Data",
-   "label": "Purpose"
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Purpose",
+   "options": "\nAsset Request\nAsset Transfer"
   },
   {
    "fieldname": "location",
    "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Location",
    "options": "Location"
   },
@@ -79,6 +87,7 @@
    "fieldtype": "Column Break"
   },
   {
+   "depends_on": "eval:doc.docstatus == 0",
    "fieldname": "assign",
    "fieldtype": "Button",
    "label": "Assign"
@@ -119,12 +128,19 @@
    "options": "Asset Request Form",
    "print_hide": 1,
    "read_only": 1
+  },
+  {
+   "fieldname": "asset_movement_configuration",
+   "fieldtype": "Link",
+   "label": "Asset Movement Configuration",
+   "options": "Asset Movement Configuration",
+   "read_only": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2023-09-01 13:38:46.267995",
+ "modified": "2023-09-25 10:17:47.941305",
  "modified_by": "Administrator",
  "module": "Afghan Customization",
  "name": "Asset Request Form",
@@ -132,6 +148,8 @@
  "owner": "Administrator",
  "permissions": [
   {
+   "amend": 1,
+   "cancel": 1,
    "create": 1,
    "delete": 1,
    "email": 1,
@@ -140,7 +158,9 @@
    "read": 1,
    "report": 1,
    "role": "System Manager",
+   "select": 1,
    "share": 1,
+   "submit": 1,
    "write": 1
   }
  ],
