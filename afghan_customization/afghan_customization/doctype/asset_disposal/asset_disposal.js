@@ -20,6 +20,14 @@ frappe.ui.form.on('Asset Disposal', {
 			});
 		}
 
+		frm.set_query('asset_name', () => {
+			return {
+				filters: {
+					status: ['in', ['Submitted','Partially Depreciated']]
+				}
+			}
+		})
+
 	},
 	assign:function(frm){
 
@@ -51,12 +59,13 @@ frappe.ui.form.on('Asset Disposal', {
 			frappe.db.get_doc('Asset', frm.doc.asset_name)
 			.then(doc => {
 				console.log(doc)
+				frm.set_value('item_code',doc.item_code)
 				frm.set_value('asset_tag_no',doc.asset_tag_no)
 				frm.set_value('location',doc.location),
 				frm.set_value('model',doc.model)
 				frm.set_value('make',doc.make)
 				frm.set_value('capacity',doc.capacity)
-				frm.refresh_field('asset_tag_no','location','make','model','capacity')
+				frm.refresh_field('asset_tag_no','location','make','model','capacity','item_code')
 			})
 		}
 	}
