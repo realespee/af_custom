@@ -66,7 +66,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2023-09-23 12:21:39.494221",
+ "modified": "2023-09-25 14:35:44.014010",
  "modified_by": "Administrator",
  "module": "Afghan Customization",
  "name": "Asset Movement Configuration",
@@ -74,6 +74,8 @@
  "owner": "Administrator",
  "permissions": [
   {
+   "amend": 1,
+   "cancel": 1,
    "create": 1,
    "delete": 1,
    "email": 1,

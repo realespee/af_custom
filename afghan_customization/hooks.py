@@ -124,6 +124,9 @@ doc_events = {
 	},
     "Purchase Order":{
         "validate":"afghan_customization.afghan_customization.doctype_triggers.purchase_order.purchase_order.validate"
+    },
+    "Asset Movement":{
+        "on_submit":"afghan_customization.afghan_customization.doctype_triggers.asset_movement.asset_movement.on_submit"
     }
 }
 

@@ -12,6 +12,7 @@ class AssetMovementConfiguration(Document):
         for item in self.asset_item:
             frappe.db.set_value('AWCC Request Item',{'item':item.item,'parent':self.asset_request_form},'asset_tag',item.asset_tag) 
             frappe.db.set_value('AWCC Request Item',{'item':item.item,'parent':self.asset_request_form},'asset',item.asset) 
+
             frappe.db.commit()
 
 def create_asset_movement(self):
@@ -63,7 +64,7 @@ def asset_list_filter(doctype, txt, searchfield, start, page_len, filters):
         SELECT a.name,a.make,a.model,a.capacity
         FROM `tabAsset` a
         Left Join`tabItem` i on i.name = a.item_code 
-        WHERE a.item_code = %(item)s AND a.model = %(model)s AND a.make = %(make)s AND a.capacity = %(capacity)s AND a.docstatus = 1 AND i.name LIKE %(txt)s
+        WHERE a.item_code = %(item)s AND a.model = %(model)s AND a.make = %(make)s AND a.capacity = %(capacity)s AND a.docstatus = 1 AND a.status = 'Submitted' AND i.name LIKE %(txt)s
         {mcond}
         """.format(**{
             'key': searchfield,

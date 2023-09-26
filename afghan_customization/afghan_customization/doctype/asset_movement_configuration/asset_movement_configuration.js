@@ -22,5 +22,26 @@ frappe.ui.form.on('Asset Movement Configuration', {
             };
             
         });
-	}
+	},
+    validate: function(frm){
+        
+        frm.doc.asset_item.forEach(function(row){
+            row.target_location = frm.doc.location
+        })
+    }
+});
+
+
+frappe.ui.form.on('Asset Movement Configuration Item', {
+	refresh: function(frm) {
+		
+	},
+    asset: async function(frm,cdt,cdn){
+        var row =locals[cdt][cdn];
+        var location_value = await frappe.db.get_value('Asset',row.asset,'location')
+        
+        frappe.model.set_value(cdt,cdn,'from_location',location_value.message.location)
+
+        refresh_field('asset_item')
+    }
 });

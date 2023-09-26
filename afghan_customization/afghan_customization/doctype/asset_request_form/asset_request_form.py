@@ -20,8 +20,21 @@ class AssetRequestForm(Document):
 					item.capacity = make_model_value.capacity
 
 	def on_submit(self):
-		create_material_request(self)
-		create_asset_movement_configuration(self)
+		for row in self.item_request:
+			if row.is_asset_item == 0:
+				create_material_request(self)
+			elif row.is_asset_item == 1:	
+				create_asset_movement_configuration(self)
+
+	def on_trash(self):
+		pass
+		# if self.name:
+		# 	amc_doc = frappe.get_doc('Asset Movement Configuration',{'asset_request_form':self.name})
+		# 	amc_doc.delete()
+
+		# 	mr_doc = frappe.get_doc('Material Request',{'asset_request_form':self.name})
+		# 	mr_doc.delete()
+	
 
 
 def create_material_request(self):
@@ -32,6 +45,7 @@ def create_material_request(self):
 			'material_request_type':'Material Transfer',
 			'schedule_date':self.date,
 			'asset_request_form':self.name,
+			'set_warehouse':'AWCC Warehouse - AWCC',
 			'items':[]		
 		})
 		for item in self.item_request:
@@ -39,7 +53,8 @@ def create_material_request(self):
 				item_doc = {
 					'doctype':'Material Request Item',
 					'item_code':item.item,
-					'qty':item.qty
+					'qty':item.qty,
+					'warehouse':'AWCC Warehouse - AWCC'
 				}
 				
 				mr_doc.append('items', item_doc)
@@ -72,8 +87,7 @@ def create_asset_movement_configuration(self):
 				}
 				amc_doc.append('asset_item',amc_item_doc)
 		
-		amc = amc_doc.insert(ignore_permissions = 1)
-		frappe.db.set_value('Asset Request Form',self.name,'asset_movement_configuration',amc.name)
+		amc_doc.insert(ignore_permissions = 1)
 		frappe.msgprint("Your Asset Movement Configuration Is Created")
 	except:
 		frappe.log_error(message=frappe.get_traceback(),title="Creation Of Asset Movement Configuration From Asset Request Form: ")
