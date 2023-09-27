@@ -29,9 +29,11 @@
  ],
  "fields": [
   {
+   "default": "Today",
    "fieldname": "date",
    "fieldtype": "Date",
-   "label": "Date"
+   "label": "Date",
+   "read_only": 1
   },
   {
    "fieldname": "requested_by",
@@ -46,12 +48,14 @@
    "fieldtype": "Column Break"
   },
   {
+   "default": "Asset Request",
    "fieldname": "purpose",
    "fieldtype": "Select",
    "in_list_view": 1,
    "in_standard_filter": 1,
    "label": "Purpose",
-   "options": "\nAsset Request\nAsset Transfer"
+   "options": "Asset Request",
+   "read_only": 1
   },
   {
    "fieldname": "location",
@@ -132,7 +136,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2023-09-25 15:30:51.448491",
+ "modified": "2023-09-27 12:29:33.291330",
  "modified_by": "Administrator",
  "module": "Afghan Customization",
  "name": "Asset Request Form",

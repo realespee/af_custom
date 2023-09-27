@@ -19,21 +19,17 @@ class AssetRequestForm(Document):
 					item.model = make_model_value.model
 					item.capacity = make_model_value.capacity
 
+			# Set received_by from location
+			received_by = frappe.db.get_value('Location',self.location,'representative')
+			if received_by:
+				item.received_by = received_by 
+
 	def on_submit(self):
 		for row in self.item_request:
 			if row.is_asset_item == 0:
 				create_material_request(self)
 			elif row.is_asset_item == 1:	
 				create_asset_movement_configuration(self)
-
-	def on_trash(self):
-		pass
-		# if self.name:
-		# 	amc_doc = frappe.get_doc('Asset Movement Configuration',{'asset_request_form':self.name})
-		# 	amc_doc.delete()
-
-		# 	mr_doc = frappe.get_doc('Material Request',{'asset_request_form':self.name})
-		# 	mr_doc.delete()
 	
 
 
@@ -45,7 +41,7 @@ def create_material_request(self):
 			'material_request_type':'Material Transfer',
 			'schedule_date':self.date,
 			'asset_request_form':self.name,
-			'set_warehouse':'AWCC Warehouse - AWCC',
+			'set_warehouse':frappe.db.get_value('Location',self.location,'warehouse') or 'AWCC Warehouse - AWCC',
 			'items':[]		
 		})
 		for item in self.item_request:
@@ -63,7 +59,7 @@ def create_material_request(self):
 		frappe.msgprint("Your Material Request Is Created")
 	except:
 		frappe.log_error(message=frappe.get_traceback(),title="Creation Of Material Reuest From Asset Request Form: ")
-		frappe.msgprint("Error occured while creating the Material Request, Kindly check the logs")
+		frappe.throw("Error occured while creating the Material Request, Kindly check the logs")
 
 
 def create_asset_movement_configuration(self):
@@ -91,7 +87,7 @@ def create_asset_movement_configuration(self):
 		frappe.msgprint("Your Asset Movement Configuration Is Created")
 	except:
 		frappe.log_error(message=frappe.get_traceback(),title="Creation Of Asset Movement Configuration From Asset Request Form: ")
-		frappe.msgprint("Error occured while creating the Asset Movement Configuration, Kindly check the logs")
+		frappe.throw("Error occured while creating the Asset Movement Configuration, Kindly check the logs")
 
 @frappe.whitelist()
 def create_todo(self):
@@ -117,12 +113,12 @@ def create_todo(self):
 
 	except Exception as e:
 		frappe.log_error(message=frappe.get_traceback(),title="Creation Of ToDo From Asset Request Form: ")
-		frappe.msgprint("Error occured while creating the ToDo, Kindly check the logs")	
+		frappe.throw("Error occured while creating the ToDo, Kindly check the logs")	
 
 
 @frappe.whitelist()
 def make_asset_transfer(source_name, target_doc=None):
-	
+	 
 	doc = get_mapped_doc(
 		"Asset Request Form",
 		source_name,
@@ -140,14 +136,16 @@ def make_asset_transfer(source_name, target_doc=None):
 					"make":"make",
 					"model":"model",
 					"capacity":"capacity",
-					"asset_tag":"asset_tag"
-					
+					"asset_tag":"asset_tag",
+					'location':'from_location'
 				},
 				"condition": lambda row: row.is_asset_item == 1,
 			},
 		},
 		target_doc,
 	)
+	for item in doc.get("item_table"):
+		item.from_location = doc.location
 
 	return doc
 

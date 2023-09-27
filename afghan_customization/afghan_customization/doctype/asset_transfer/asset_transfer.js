@@ -28,5 +28,6 @@ frappe.ui.form.on('Asset Transfer', {
 					})
 				}, __("Get Items From"));
 		}
-	},
+	}
 });
+
