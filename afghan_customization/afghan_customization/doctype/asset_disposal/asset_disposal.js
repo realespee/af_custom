@@ -4,7 +4,7 @@
 frappe.ui.form.on('Asset Disposal', {
 	refresh: function(frm) {
 
-		if(frm.doc.docstatus === 1){
+		if(frm.doc.docstatus === 1 && frm.doc.workflow_state !== 'Rejected'){
 			frm.add_custom_button(__("Scrap Asset"), function() {
 				frappe.confirm(__("Do you really want to scrap this asset?"), function () {
 					frappe.call({
