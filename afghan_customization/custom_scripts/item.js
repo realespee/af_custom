@@ -20,14 +20,14 @@ frappe.ui.form.on('Item', {
             callback: (r) => {
                 console.log(r.message)
                 if(r.message.length>0){
-                    frm.clear_table("item_details"); 
+                    frm.clear_table("custom_item_details"); 
                     for (var i in r.message) {
-                        let row = frm.add_child('item_details')
+                        let row = frm.add_child('custom_item_details')
                         row.make = r.message[i].name
                         row.model = r.message[i].model
                         row.capacity = r.message[i].capacity
                     }
-                    refresh_field('item_details')
+                    refresh_field('custom_item_details')
                     frm.save()
                 }
                 else{

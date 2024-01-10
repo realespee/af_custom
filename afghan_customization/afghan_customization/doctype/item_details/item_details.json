@@ -1,7 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
- "creation": "2023-09-19 17:31:20.802087",
+ "creation": "2023-12-11 15:35:42.824767",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
@@ -34,7 +34,7 @@
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2023-09-19 17:59:35.221077",
+ "modified": "2023-12-11 15:36:51.411274",
  "modified_by": "Administrator",
  "module": "Afghan Customization",
  "name": "Item Details",

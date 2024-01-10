@@ -21,11 +21,24 @@
   "remarks",
   "approval_section_section",
   "hod_approval",
-  "column_break_klezt",
-  "assign",
-  "amended_from"
+  "column_break_pba5",
+  "assign"
  ],
  "fields": [
+  {
+   "fieldname": "section_break_320i",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "AWCC Job Completion Certificate",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
   {
    "fieldname": "po_number",
    "fieldtype": "Link",

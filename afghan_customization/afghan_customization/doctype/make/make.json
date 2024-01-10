@@ -14,13 +14,13 @@
   {
    "fieldname": "make",
    "fieldtype": "Data",
-   "label": "make",
+   "label": "Make",
    "unique": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-09-19 17:49:27.790165",
+ "modified": "2023-12-11 15:22:47.068270",
  "modified_by": "Administrator",
  "module": "Afghan Customization",
  "name": "Make",
