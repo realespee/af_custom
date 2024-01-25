@@ -1,10 +1,8 @@
 {
  "actions": [],
  "allow_rename": 1,
- "creation": "2023-09-19 17:43:11.304035",
- "default_view": "List",
+ "creation": "2023-12-11 15:25:09.004396",
  "doctype": "DocType",
- "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
   "make",

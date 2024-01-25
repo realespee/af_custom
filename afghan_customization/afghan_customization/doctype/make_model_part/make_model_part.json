@@ -1,11 +1,8 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "field:make",
- "creation": "2023-09-19 17:26:31.975078",
- "default_view": "List",
+ "creation": "2023-12-11 15:30:50.325709",
  "doctype": "DocType",
- "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
   "item",
@@ -47,11 +44,10 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-09-22 09:47:57.302316",
+ "modified": "2023-12-11 15:33:29.824819",
  "modified_by": "Administrator",
  "module": "Afghan Customization",
  "name": "Make Model Part",
- "naming_rule": "By fieldname",
  "owner": "Administrator",
  "permissions": [
   {

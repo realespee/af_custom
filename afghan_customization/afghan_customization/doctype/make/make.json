@@ -1,11 +1,10 @@
 {
  "actions": [],
+ "allow_import": 1,
  "allow_rename": 1,
  "autoname": "field:make",
- "creation": "2023-09-19 17:49:27.790165",
- "default_view": "List",
+ "creation": "2023-12-11 15:21:36.727837",
  "doctype": "DocType",
- "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
   "make"
@@ -20,7 +19,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-12-11 15:22:47.068270",
+ "modified": "2024-01-23 11:44:17.931108",
  "modified_by": "Administrator",
  "module": "Afghan Customization",
  "name": "Make",
