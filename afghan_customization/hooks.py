@@ -210,3 +210,56 @@ doc_events = {
 # auth_hooks = [
 #	"afghan_customization.auth.validate"
 # ]
+
+
+# fixtures = [
+#     {"dt": "Role", "filters": [["name", "in", [
+#         'Branch Shop',
+#         'Branch Shop Executive',
+#         'HQ Logistic Manager',
+#         'Regional Manager',
+#         'Regional Warehouse Manager',
+#         'HQ Finance Manager',
+#         'Regional Sales Manager',
+#         'HQ Warehouse Manager',
+#         'HQ Sales Manager',
+#         'Cashier',
+#         'Regional Logistic Manager',
+#         'Branch Shop Officer',
+#         'Regional Finance Manager',
+#     ]]]},
+
+#     {"dt": "Role Profile", "filters": [["name", "in", [
+#         'Branch Shop',
+#         'Branch Shop Executive',
+#         'Regional Manager',
+#         'Cashier',
+#         'Afghan Wireless',
+#         'SAF Team'
+#     ]]]},
+
+#     {"dt": "Custom DocPerm", "filters": [["role", "in", [
+#         'Branch Shop',
+#         'Branch Shop Executive',
+#         'HQ Logistic Manager',
+#         'Regional Manager',
+#         'Regional Warehouse Manager',
+#         'HQ Finance Manager',
+#         'Regional Sales Manager',
+#         'HQ Warehouse Manager',
+#         'HQ Sales Manager',
+#         'Cashier',
+#         'Regional Logistic Manager',
+#         'Branch Shop Officer',
+#         'Regional Finance Manager',
+#     ]]]},
+
+#     {"dt": "Module Profile", "filters": [["name", "in", [
+#         'HQ Manager',
+#         'Regional Manager',
+#         'POS Agent',
+#         'Safman'
+#     ]]]}
+
+# ]
+
