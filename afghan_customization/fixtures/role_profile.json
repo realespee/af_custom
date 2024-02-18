@@ -1,0 +1,212 @@
+[
+ {
+  "docstatus": 0,
+  "doctype": "Role Profile",
+  "modified": "2023-03-28 13:22:32.704552",
+  "name": "Branch Shop",
+  "role_profile": "Branch Shop",
+  "roles": [
+   {
+    "parent": "Branch Shop",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Branch Shop"
+   },
+   {
+    "parent": "Branch Shop",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Branch Shop Executive"
+   }
+  ]
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Role Profile",
+  "modified": "2023-02-09 15:03:50.005513",
+  "name": "SAF Team",
+  "role_profile": "SAF Team",
+  "roles": [
+   {
+    "parent": "SAF Team",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "SAF Team"
+   }
+  ]
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Role Profile",
+  "modified": "2023-02-12 11:39:52.332752",
+  "name": "Afghan Wireless",
+  "role_profile": "Afghan Wireless",
+  "roles": [
+   {
+    "parent": "Afghan Wireless",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Employee"
+   },
+   {
+    "parent": "Afghan Wireless",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Item Manager"
+   },
+   {
+    "parent": "Afghan Wireless",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Sales Manager"
+   },
+   {
+    "parent": "Afghan Wireless",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Purchase User"
+   },
+   {
+    "parent": "Afghan Wireless",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Sales User"
+   },
+   {
+    "parent": "Afghan Wireless",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Stock User"
+   },
+   {
+    "parent": "Afghan Wireless",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Sales Master Manager"
+   },
+   {
+    "parent": "Afghan Wireless",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Purchase Manager"
+   },
+   {
+    "parent": "Afghan Wireless",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Accounts Manager"
+   },
+   {
+    "parent": "Afghan Wireless",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Stock Manager"
+   }
+  ]
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Role Profile",
+  "modified": "2023-09-21 12:21:30.869471",
+  "name": "Branch Shop Executive",
+  "role_profile": "Branch Shop Executive",
+  "roles": [
+   {
+    "parent": "Branch Shop Executive",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Branch Shop"
+   }
+  ]
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Role Profile",
+  "modified": "2023-03-30 09:34:36.644326",
+  "name": "Regional Manager",
+  "role_profile": "Regional Manager ",
+  "roles": [
+   {
+    "parent": "Regional Manager",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Accounts Manager"
+   },
+   {
+    "parent": "Regional Manager",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Accounts User"
+   },
+   {
+    "parent": "Regional Manager",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Sales Manager"
+   },
+   {
+    "parent": "Regional Manager",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Sales User"
+   },
+   {
+    "parent": "Regional Manager",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Stock Manager"
+   },
+   {
+    "parent": "Regional Manager",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Sales Master Manager"
+   },
+   {
+    "parent": "Regional Manager",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Purchase Manager"
+   },
+   {
+    "parent": "Regional Manager",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Item Manager"
+   },
+   {
+    "parent": "Regional Manager",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Stock User"
+   },
+   {
+    "parent": "Regional Manager",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Customer"
+   }
+  ]
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Role Profile",
+  "modified": "2023-03-15 08:23:15.813383",
+  "name": "Cashier",
+  "role_profile": "Cashier",
+  "roles": [
+   {
+    "parent": "Cashier",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Branch Shop Officer"
+   },
+   {
+    "parent": "Cashier",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Cashier"
+   }
+  ]
+ }
+]
