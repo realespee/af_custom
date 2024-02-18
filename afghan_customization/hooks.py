@@ -212,7 +212,7 @@ doc_events = {
 # ]
 
 
-# fixtures = [
+fixtures = [
 #     {"dt": "Role", "filters": [["name", "in", [
 #         'Branch Shop',
 #         'Branch Shop Executive',
@@ -259,7 +259,18 @@ doc_events = {
 #         'Regional Manager',
 #         'POS Agent',
 #         'Safman'
-#     ]]]}
+#     ]]]},
 
-# ]
+    # {"dt": "Workspace", "filters": [["name", "in", [
+    #     'Branch Shop Manager',
+    #     'Regional Manager',
+    #     'HQ Finance Manager',
+    #     'Branch Executives',
+    #     'HQ Logistic',
+    #     'HQ Warehouse',
+    #     'Asset Management',
+    #     'SAF Team'
+    # ]]]}
+
+]
 
