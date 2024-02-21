@@ -32,8 +32,7 @@
    "fieldname": "make",
    "fieldtype": "Link",
    "label": "Make",
-   "options": "Make",
-   "unique": 1
+   "options": "Make"
   },
   {
    "fieldname": "model",
