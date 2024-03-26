@@ -272,5 +272,27 @@ fixtures = [
     #     'SAF Team'
     # ]]]}
 
+    {"dt": "UOM", "filters": [["name", "in", [
+        'Can',
+        'Takhta',
+        'Roll',
+        'Pocket',
+        'Pack',
+        'Lot',
+        'Kit',
+        'Khada',
+        'Coil',
+        'Carten',
+        'Bottle',
+        'Ballon',
+        'Year',
+        'Number',
+        'Antenna',
+        'Each',
+        'Pcs'
+
+    ]]]},
+    'Item Group'
+
 ]
 
