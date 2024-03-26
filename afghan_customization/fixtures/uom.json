@@ -1,0 +1,155 @@
+[
+ {
+  "docstatus": 0,
+  "doctype": "UOM",
+  "enabled": 1,
+  "modified": "2024-03-21 12:54:04.234547",
+  "must_be_whole_number": 0,
+  "name": "Antenna",
+  "uom_name": "Antenna"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "UOM",
+  "enabled": 1,
+  "modified": "2024-03-21 12:54:52.336434",
+  "must_be_whole_number": 0,
+  "name": "Number",
+  "uom_name": "Number"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "UOM",
+  "enabled": 1,
+  "modified": "2024-03-21 12:55:27.145163",
+  "must_be_whole_number": 0,
+  "name": "Year",
+  "uom_name": "Year"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "UOM",
+  "enabled": 1,
+  "modified": "2024-03-22 12:41:01.768350",
+  "must_be_whole_number": 0,
+  "name": "Ballon",
+  "uom_name": "Ballon"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "UOM",
+  "enabled": 1,
+  "modified": "2024-03-22 12:41:48.365612",
+  "must_be_whole_number": 0,
+  "name": "Bottle",
+  "uom_name": "Bottle"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "UOM",
+  "enabled": 1,
+  "modified": "2024-03-22 12:42:59.641302",
+  "must_be_whole_number": 0,
+  "name": "Carten",
+  "uom_name": "Carten"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "UOM",
+  "enabled": 1,
+  "modified": "2024-03-22 12:44:21.803699",
+  "must_be_whole_number": 0,
+  "name": "Coil",
+  "uom_name": "Coil"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "UOM",
+  "enabled": 1,
+  "modified": "2024-03-22 12:46:08.997499",
+  "must_be_whole_number": 0,
+  "name": "Khada",
+  "uom_name": "Khada"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "UOM",
+  "enabled": 1,
+  "modified": "2024-03-22 12:46:30.923280",
+  "must_be_whole_number": 0,
+  "name": "Kit",
+  "uom_name": "Kit"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "UOM",
+  "enabled": 1,
+  "modified": "2024-03-22 12:47:21.496218",
+  "must_be_whole_number": 0,
+  "name": "Lot",
+  "uom_name": "Lot"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "UOM",
+  "enabled": 1,
+  "modified": "2024-03-22 12:49:01.227434",
+  "must_be_whole_number": 0,
+  "name": "Pack",
+  "uom_name": "Pack"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "UOM",
+  "enabled": 1,
+  "modified": "2024-03-22 12:51:07.642356",
+  "must_be_whole_number": 0,
+  "name": "Pocket",
+  "uom_name": "Pocket"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "UOM",
+  "enabled": 1,
+  "modified": "2024-03-22 12:51:35.391092",
+  "must_be_whole_number": 0,
+  "name": "Roll",
+  "uom_name": "Roll"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "UOM",
+  "enabled": 1,
+  "modified": "2024-03-22 12:52:10.022676",
+  "must_be_whole_number": 0,
+  "name": "Takhta",
+  "uom_name": "Takhta"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "UOM",
+  "enabled": 1,
+  "modified": "2024-03-22 13:27:09.621180",
+  "must_be_whole_number": 0,
+  "name": "Can",
+  "uom_name": "Can"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "UOM",
+  "enabled": 1,
+  "modified": "2024-03-19 09:42:43.008871",
+  "must_be_whole_number": 0,
+  "name": "Each",
+  "uom_name": "Each"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "UOM",
+  "enabled": 1,
+  "modified": "2024-03-03 14:30:50.758133",
+  "must_be_whole_number": 0,
+  "name": "Pcs",
+  "uom_name": "Pcs"
+ }
+]
