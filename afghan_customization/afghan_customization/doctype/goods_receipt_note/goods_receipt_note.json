@@ -26,7 +26,8 @@
   {
    "fieldname": "date",
    "fieldtype": "Date",
-   "label": "Date"
+   "label": "Date",
+   "read_only": 1
   },
   {
    "fieldname": "section_break_9ospu",
@@ -36,13 +37,15 @@
    "fieldname": "supplier_name",
    "fieldtype": "Link",
    "label": "Supplier Name",
-   "options": "Supplier"
+   "options": "Supplier",
+   "read_only": 1
   },
   {
    "fieldname": "supplier_address",
    "fieldtype": "Link",
    "label": "Supplier Address",
-   "options": "Address"
+   "options": "Address",
+   "read_only": 1
   },
   {
    "fieldname": "column_break_ez77o",
@@ -52,19 +55,22 @@
    "fieldname": "warehouse",
    "fieldtype": "Link",
    "label": "Warehouse",
-   "options": "Warehouse"
+   "options": "Warehouse",
+   "read_only": 1
   },
   {
    "fieldname": "warehouse_address",
    "fieldtype": "Link",
    "label": "Warehouse Address",
-   "options": "Address"
+   "options": "Address",
+   "read_only": 1
   },
   {
    "fieldname": "company",
    "fieldtype": "Link",
    "label": "Company",
-   "options": "Company"
+   "options": "Company",
+   "read_only": 1
   },
   {
    "fieldname": "supplier_address_display",
@@ -96,7 +102,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-09-27 11:53:08.769943",
+ "modified": "2024-03-29 17:44:18.222194",
  "modified_by": "Administrator",
  "module": "Afghan Customization",
  "name": "Goods Receipt Note",

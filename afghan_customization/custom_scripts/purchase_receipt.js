@@ -1,11 +1,35 @@
 frappe.ui.form.on('Purchase Receipt', {
 	refresh(frm) {
 		// your code here
+	},
+	custom_assign_multiple_representative:function(frm){
+		
+		for(var i in frm.doc.items){
+			frm.doc.items[i].assigned_representative = frm.doc.custom_assign_multiple_representative
+		}
+	},
+	custom_assign_multiple_:function(frm){
+		frappe.call({
+			method: 'afghan_customization.afghan_customization.doctype_triggers.purchase_receipt.purchase_receipt.create_multiple_todo',
+			args: {
+				'items': frm.doc.items,
+				'date':frm.doc.posting_date,
+				'assign_user':frappe.session.user,
+				'name':frm.doc.name
+
+			},
+			freeze: true,
+			callback: (r) => {
+				// on success
+				console.log(r.message)	
+				frm.reload_doc();
+			}
+		})
 	}
 })
 
 frappe.ui.form.on('Purchase Receipt Item', {
-	refresh(frm) {
+	refresh:function(frm,cdt,cdn) {
 		// your code here
 	},
     assign:function(frm,cdt,cdn){
@@ -53,10 +77,12 @@ frappe.ui.form.on('Purchase Receipt Item', {
 		const l = locals[cdt][cdn]
 		frappe.model.set_value(cdt,cdn,"qa_check",1)
 		refresh_field("items")
+		frm.save()
 	},
 	clear_quality_check:function(frm,cdt,cdn){
 		let m = locals[cdt][cdn]
 		frappe.model.set_value(cdt,cdn,"qa_check",0)
 		refresh_field("items")
+		frm.save()
 	}
 })

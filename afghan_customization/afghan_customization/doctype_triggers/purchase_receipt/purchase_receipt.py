@@ -1,5 +1,5 @@
 import frappe
-
+import json
 
 def on_submit(self,method):
 
@@ -31,6 +31,9 @@ def create_grn(self):
             grn_item_doc = {
                 'doctype':'Goods Receipt Note Item',
                 'item':d.item_code,
+                'make':d.make,
+                'model':d.model,
+                'capacity':d.capacity,
                 'description':d.description,
                 'arrival_date':self.posting_date,
                 'qty_received':d.qty,
@@ -64,6 +67,32 @@ def create_todo(item_name,qty,user,date,assign_user,name):
         new_doc.insert(ignore_permissions = True)
         todo_doc = new_doc.save()
         return todo_doc.name
+    except:
+        frappe.log_error(message = frappe.get_traceback(),title="Create ToDo from Purchase Receipt Item")
+        frappe.msgprint("Error occured while creating ToDo, Kindly check the logs")
+
+
+@frappe.whitelist()
+def create_multiple_todo(items,date,assign_user,name):
+    try:
+        if not frappe.db.exists("ToDo",{"reference_type":"Purchase Receipt","reference_name":name}):
+            items = json.loads(items)
+            for item in items:
+                todo_doc = frappe.new_doc("ToDo")
+                todo_doc.allocated_to = item.get("assigned_representative")
+                todo_doc.date = date
+                todo_doc.priority = "High"
+                todo_doc.description = "Quality Check for Item Name: <b>{0}</b>, Qty:<b>{1}</b>".format(item.get("item_name"),item.get("qty"))
+                todo_doc.reference_type = "Purchase Receipt"
+                todo_doc.reference_name = name
+                todo_doc.assigned_by = assign_user
+
+                todo_doc.insert(ignore_permissions = True)
+                frappe.db.set_value("Purchase Receipt Item",item.get("name"),'todo',todo_doc.name)
+                
+            frappe.msgprint("Your ToDo is Created")
+        else:
+            frappe.msgprint("ToDo already exists for this Purchase Receipt")
     except:
         frappe.log_error(message = frappe.get_traceback(),title="Create ToDo from Purchase Receipt Item")
         frappe.msgprint("Error occured while creating ToDo, Kindly check the logs")

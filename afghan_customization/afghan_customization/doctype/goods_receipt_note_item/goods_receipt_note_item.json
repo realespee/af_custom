@@ -7,6 +7,9 @@
  "engine": "InnoDB",
  "field_order": [
   "item",
+  "make",
+  "model",
+  "capacity",
   "column_break_ymytq",
   "arrival_date",
   "description",
@@ -26,7 +29,8 @@
    "fieldtype": "Link",
    "in_list_view": 1,
    "label": "Item",
-   "options": "Item"
+   "options": "Item",
+   "read_only": 1
   },
   {
    "fieldname": "column_break_ymytq",
@@ -36,7 +40,8 @@
    "fieldname": "arrival_date",
    "fieldtype": "Date",
    "in_list_view": 1,
-   "label": "Arrival Date"
+   "label": "Arrival Date",
+   "read_only": 1
   },
   {
    "fieldname": "description",
@@ -51,18 +56,21 @@
    "fieldname": "qty_received",
    "fieldtype": "Float",
    "in_list_view": 1,
-   "label": "Qty Received"
+   "label": "Qty Received",
+   "read_only": 1
   },
   {
    "fieldname": "unit_cost",
    "fieldtype": "Currency",
    "in_list_view": 1,
-   "label": "Unit Cost"
+   "label": "Unit Cost",
+   "read_only": 1
   },
   {
    "fieldname": "extended_cost",
    "fieldtype": "Currency",
-   "label": "Extended Cost"
+   "label": "Extended Cost",
+   "read_only": 1
   },
   {
    "fieldname": "column_break_wbmyj",
@@ -72,7 +80,8 @@
    "fieldname": "uom",
    "fieldtype": "Link",
    "label": "UOM",
-   "options": "UOM"
+   "options": "UOM",
+   "read_only": 1
   },
   {
    "fieldname": "section_break_gbtzi",
@@ -81,19 +90,39 @@
   {
    "fieldname": "reference",
    "fieldtype": "Data",
-   "label": "Reference"
+   "label": "Reference",
+   "read_only": 1
   },
   {
    "fieldname": "po_number",
    "fieldtype": "Link",
    "label": "PO Number",
-   "options": "Purchase Order"
+   "options": "Purchase Order",
+   "read_only": 1
+  },
+  {
+   "fieldname": "make",
+   "fieldtype": "Data",
+   "label": "Make",
+   "read_only": 1
+  },
+  {
+   "fieldname": "model",
+   "fieldtype": "Data",
+   "label": "Model",
+   "read_only": 1
+  },
+  {
+   "fieldname": "capacity",
+   "fieldtype": "Data",
+   "label": "Capacity",
+   "read_only": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2023-09-27 11:26:56.997216",
+ "modified": "2024-03-29 17:41:50.629030",
  "modified_by": "Administrator",
  "module": "Afghan Customization",
  "name": "Goods Receipt Note Item",

@@ -1,6 +1,8 @@
 {
  "actions": [],
+ "allow_import": 1,
  "allow_rename": 1,
+ "autoname": "[make]",
  "creation": "2023-12-11 15:30:50.325709",
  "doctype": "DocType",
  "engine": "InnoDB",
@@ -44,10 +46,11 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-12-11 15:33:29.824819",
+ "modified": "2024-05-13 14:47:15.979840",
  "modified_by": "Administrator",
  "module": "Afghan Customization",
  "name": "Make Model Part",
+ "naming_rule": "By fieldname",
  "owner": "Administrator",
  "permissions": [
   {
