@@ -4,7 +4,7 @@ frappe.ui.form.on('Purchase Order', {
         frm.set_query("make", "items", function(doc, cdt, cdn) {
             
             var d =locals[cdt][cdn]
-            
+            console.log("in filter")
             return {
                 query: "afghan_customization.afghan_customization.doctype_triggers.purchase_order.purchase_order.filter_make",
                 filters:{"item": d.item_code} 
