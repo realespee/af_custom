@@ -5,7 +5,7 @@ from frappe.model.mapper import get_mapped_doc
 def validate(self,method):
     for item in self.items:
         if item.make:
-            make_model_value=frappe.db.get_value('Make Model Capacity',{'make':item.make,'parent':item.item_code},['model','capacity'],as_dict=1)
+            make_model_value=frappe.db.get_value('Item Details',{'make':item.make,'parent':item.item_code},['model','capacity'],as_dict=1)
             if make_model_value:
                 item.model = make_model_value.model
                 item.capacity = make_model_value.capacity
@@ -16,18 +16,17 @@ def validate(self,method):
 def filter_make(doctype, txt, searchfield, start, page_len, filters):
     return frappe.db.sql("""
         SELECT ma.make,ma.model,ma.capacity
-        FROM `tabMake Model Capacity` ma
+        FROM `tabItem Details` ma
         Inner Join`tabItem` i on i.name = ma.parent 
-        WHERE i.name = %(item)s AND i.name LIKE %(txt)s
+        WHERE i.name = %(item_code)s AND i.name LIKE %(txt)s
         {mcond}
         """.format(**{
             'key': searchfield,
             'mcond':get_match_cond(doctype)
         }),
         {
-        "item" :filters.get("item") ,
-        'txt': "%{}%".format(txt),
-        '_txt': txt.replace("%", "")
+        "item_code" :filters.get("item"),
+        'txt': "%{}%".format(txt)
         }
         )
 

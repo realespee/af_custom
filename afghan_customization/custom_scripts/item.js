@@ -23,7 +23,7 @@ frappe.ui.form.on('Item', {
                     frm.clear_table("custom_item_details"); 
                     for (var i in r.message) {
                         let row = frm.add_child('custom_item_details')
-                        row.make = r.message[i].name
+                        row.make = r.message[i].make
                         row.model = r.message[i].model
                         row.capacity = r.message[i].capacity
                     }
